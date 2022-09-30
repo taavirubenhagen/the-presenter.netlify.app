@@ -65,6 +65,7 @@
 
 <main>
 	<div class="flex flex-col items-start overflow-x-hidden bg-black">
+    jfghfhgx
     <!--<header
       class="
         {headerClass} transition_all duration-1000 delay-1000

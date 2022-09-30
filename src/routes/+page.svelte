@@ -13,14 +13,14 @@
 
 
 
-	//export let isMenuAllowed = true
+	export let isMenuAllowed = true
 	export let isVisibleMenu = false;
 
 
 
 
-	//isVisibleMenuStore.update(_ => isVisibleMenu);
-	//isVisibleMenuStore.subscribe(value => isVisibleMenu = isMenuAllowed && value);
+	isVisibleMenuStore.update(_ => isVisibleMenu);
+	isVisibleMenuStore.subscribe(value => isVisibleMenu = isMenuAllowed && value);
 
 	type tExpanded = "none" | "more"
 	let expanded = "none"
@@ -47,8 +47,8 @@
 
 
 
-	//$: isMoreButtonVisible = !isVisibleMenu && !isMenuAllowed
-	//onMount(() => isMoreButtonVisible = true)
+	$: isMoreButtonVisible = !isVisibleMenu && !isMenuAllowed
+	onMount(() => isMoreButtonVisible = true)
 </script>
 
 

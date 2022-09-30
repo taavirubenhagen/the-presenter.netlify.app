@@ -1,4 +1,4 @@
-<script lang="ts">
+<!--<script lang="ts">
 	import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
@@ -54,7 +54,7 @@
 
 
 
-<!--<svelte:window bind:scrollY={scrollY}/>-->
+<--<svelte:window bind:scrollY={scrollY}/>-->
 
 
 

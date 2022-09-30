@@ -2,9 +2,9 @@
   import { onMount } from 'svelte'
   import { fade, fly } from "svelte/transition"
 
-  /*import * as scroller from "svelte-scrollto"
-  import ChevronDown from "svelte-material-icons/ChevronDown.svelte"
-  import ChevronRight from "svelte-material-icons/ChevronRight.svelte"*/
+  import * as scroller from "svelte-scrollto"
+  import ChevronDown from "svelte-material-icons/ArrowDown.svelte"
+  import ChevronRight from "svelte-material-icons/ArrowRight.svelte"
 
 	import "../.././app.postcss";
   import * as g from "../.././stores"
@@ -113,7 +113,7 @@
         {/if}
         </div>
     </div>
-    <!--{#if isVisibleRest}
+    {#if isVisibleRest}
       <button
         title="Scroll down"
         class="scroll_down_button relative bottom-24 opacity-20"
@@ -122,7 +122,7 @@
       >
         <ChevronDown size=64 color="white"/>
       </button>
-    {/if}-->
+    {/if}
   </div>
   <div class="size_screen default_margin flex flex-col justify-start items-start">
     <button

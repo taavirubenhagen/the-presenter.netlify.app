@@ -7,3 +7,11 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+
+
+
+declare module "svelte-scrollto"
+
+declare module "svelte-material-icons/Close.svelte"
+declare module "svelte-material-icons/DotsHorizontal.svelte"

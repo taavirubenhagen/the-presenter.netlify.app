@@ -2,8 +2,8 @@
 	import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
-  /*import Close from "svelte-material-icons/Close.svelte"
-  import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"*/
+  import Close from "svelte-material-icons/Close.svelte"
+  import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"
 
 	import "../app.postcss";
 	import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../stores";
@@ -120,7 +120,7 @@
           </div>
         </div>
       {/if}
-      <!--{#if isVisibleMenu}
+      {#if isVisibleMenu}
         <div class="absolute right-4 opacity-10" transition:fade={mainContentDefaultFade}>
           <button
             on:click={() => {
@@ -142,7 +142,7 @@
             <DotsHorizontal size=24/>
           </button>
         </div>
-      {/if}-->
+      {/if}
     </header>
     <slot></slot>
 	</div>

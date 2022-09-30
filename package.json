@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-material-icons": "^2.0.4",
 		"svelte-scrollto": "^0.2.0"
 	}
 }

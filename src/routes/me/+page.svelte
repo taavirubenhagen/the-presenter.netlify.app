@@ -132,7 +132,7 @@
     >
       <a class="clickable_headline" href="/projects">
         <h2>Projects</h2>
-        <!--<ChevronRight size=64 color="white"/>-->
+        <ChevronRight size=64 color="white"/>
       </a>
     </button>
     <div class="h-16"></div>

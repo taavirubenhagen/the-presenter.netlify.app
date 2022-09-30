@@ -6,15 +6,15 @@
   import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"*/
 
 	import "../app.postcss";
-	//import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../stores";
-	//import SecondaryButton from "../_components/buttons/secondary.svelte";
+	import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../stores";
+	import SecondaryButton from "../components/buttons/secondary.svelte";
 	//import "../_assets/my_face_circle.png"
 
 
 
 
 	//export let isMenuAllowed = true
-	//export let isVisibleMenu = false;
+	export let isVisibleMenu = false;
 
 
 
@@ -22,27 +22,27 @@
 	//isVisibleMenuStore.update(_ => isVisibleMenu);
 	//isVisibleMenuStore.subscribe(value => isVisibleMenu = isMenuAllowed && value);
 
-	//type tExpanded = "none" | "more"
-	//let expanded = "none"
+	type tExpanded = "none" | "more"
+	let expanded = "none"
 
 
 
 
 	let scrollY = 0
-	//$: isY0 = scrollY === 0
-	//let previousScrollY = scrollY;
+	$: isY0 = scrollY === 0
+	let previousScrollY = scrollY;
 
-	/*type tHeaderClass = "-top-24" | "top-0"
+	type tHeaderClass = "-top-24" | "top-0"
 	function updateHeaderVisibility(y: number): tHeaderClass {
 		const dy = scrollY - previousScrollY
 		previousScrollY = y
 		return dy > 0 ? "-top-24" : "top-0"
 	}
-	$: headerClass = updateHeaderVisibility(scrollY);*/
+	$: headerClass = updateHeaderVisibility(scrollY);
 
 
-	/*type tContactButtonClass = "" | "text-onprimary"
-	let contactButtonClass: tContactButtonClass = ""*/
+	type tContactButtonClass = "" | "text-onprimary"
+	let contactButtonClass: tContactButtonClass = ""
 
 
 
@@ -65,8 +65,7 @@
 
 <main>
 	<div class="flex flex-col items-start overflow-x-hidden bg-black">
-    jfghfhgx
-    <!--<header
+    <header
       class="
         {headerClass} transition_all duration-1000 delay-1000
         fixed z-10 w-screen h-24 pl-16 pr-16 pt-8 pb-8 bg-background flex justify-between items-center"
@@ -121,7 +120,7 @@
           </div>
         </div>
       {/if}
-      {#if isVisibleMenu}
+      <!--{#if isVisibleMenu}
         <div class="absolute right-4 opacity-10" transition:fade={mainContentDefaultFade}>
           <button
             on:click={() => {
@@ -143,8 +142,8 @@
             <DotsHorizontal size=24/>
           </button>
         </div>
-      {/if}
-    </header>-->
+      {/if}-->
+    </header>
     <slot></slot>
 	</div>
 </main>

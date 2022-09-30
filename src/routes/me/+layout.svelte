@@ -5,7 +5,7 @@
   /*import Close from "svelte-material-icons/Close.svelte"
   import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"*/
 
-	import "../app.postcss";
+	import "../.././app.postcss";
 	import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../.././stores";
 	import SecondaryButton from "../.././components/buttons/secondary.svelte";
 	//import "../_assets/my_face_circle.png"

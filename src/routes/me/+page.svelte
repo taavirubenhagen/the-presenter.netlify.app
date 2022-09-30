@@ -6,7 +6,7 @@
   import ChevronDown from "svelte-material-icons/ChevronDown.svelte"
   import ChevronRight from "svelte-material-icons/ChevronRight.svelte"*/
 
-	import "../app.postcss";
+	import "../.././app.postcss";
   import * as g from "../.././stores"
 
 

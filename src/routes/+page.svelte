@@ -1,60 +1,60 @@
-<!--<script lang="ts">
+<script lang="ts">
 	import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
   /*import Close from "svelte-material-icons/Close.svelte"
-  import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"
+  import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"*/
 
 	import "../app.postcss";
-	import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../stores";
-	import SecondaryButton from "../_components/buttons/secondary.svelte";
+	//import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../stores";
+	//import SecondaryButton from "../_components/buttons/secondary.svelte";
 	//import "../_assets/my_face_circle.png"
 
 
 
 
-	export let isMenuAllowed = true
-	export let isVisibleMenu = false;
+	//export let isMenuAllowed = true
+	//export let isVisibleMenu = false;
 
 
 
 
-	isVisibleMenuStore.update(_ => isVisibleMenu);
-	isVisibleMenuStore.subscribe(value => isVisibleMenu = isMenuAllowed && value);
+	//isVisibleMenuStore.update(_ => isVisibleMenu);
+	//isVisibleMenuStore.subscribe(value => isVisibleMenu = isMenuAllowed && value);
 
-	type tExpanded = "none" | "more"
-	let expanded = "none"
+	//type tExpanded = "none" | "more"
+	//let expanded = "none"
 
 
 
 
 	let scrollY = 0
-	$: isY0 = scrollY === 0
-	let previousScrollY = scrollY;
+	//$: isY0 = scrollY === 0
+	//let previousScrollY = scrollY;
 
-	type tHeaderClass = "-top-24" | "top-0"
+	/*type tHeaderClass = "-top-24" | "top-0"
 	function updateHeaderVisibility(y: number): tHeaderClass {
 		const dy = scrollY - previousScrollY
 		previousScrollY = y
 		return dy > 0 ? "-top-24" : "top-0"
 	}
-	$: headerClass = updateHeaderVisibility(scrollY);
+	$: headerClass = updateHeaderVisibility(scrollY);*/
 
 
-	type tContactButtonClass = "" | "text-onprimary"
-	let contactButtonClass: tContactButtonClass = ""
+	/*type tContactButtonClass = "" | "text-onprimary"
+	let contactButtonClass: tContactButtonClass = ""*/
 
 
 
 
 	//$: isMoreButtonVisible = !isVisibleMenu && !isMenuAllowed
-	//onMount(() => isMoreButtonVisible = true)*/
+	//onMount(() => isMoreButtonVisible = true)
 </script>
 
 
 
 
-<--<svelte:window bind:scrollY={scrollY}/>-->
+<svelte:window bind:scrollY={scrollY}/>
 
 
 

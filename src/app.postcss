@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  @apply bg-background text-onbackground;
+  font-family: "IBM Plex Sans", "Courier New", "Open Sans";
+}
+
+
+
+
+body {
+  @apply m-0 p-0 bg-background text-onbackground;
+  font-family: "IBM Plex Mono";
+}
+
+
+body::-webkit-scrollbar {
+  @apply w-2 bg-transparent;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 640px) {
+  main {
+    max-width: none;
+  }
+}
+  
+  
+  
+  
+@media (min-width: 640px) {
+  .size_screen {
+    width: calc(100vw - 2 * 4rem);
+    min-height: calc(100vh - 2 * 4rem);
+    margin: 4rem;
+    margin-right: calc(4rem + 4rem);
+  }
+}
+@media (max-width: 640px) {
+  .size_screen {
+    width: calc(100vw - 2 * 2rem);
+    min-height: calc(100vh - 2 * 2rem);
+    margin: 2rem;
+    margin-right: calc(2rem + 4rem);
+  }
+}
+.inner_size_screen {
+  @apply size_screen m-0;
+  margin: 0;
+}
+
+
+
+
+.flex_col_center {
+  @apply flex flex-col justify-center items-center;
+}
+
+.flex_row_center {
+  @apply flex flex-row justify-center items-center;
+}
+
+
+
+
+.click-through {
+  @apply transition-all duration-500;
+  pointer-events: none;
+  background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+
+
+
+
+.transition_all {
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
+.button_hover_animationD {
+  @apply inline-block relative;
+}
+.button_hover_animationD:after {
+  @apply
+    absolute left-0 bottom-0
+    w-full
+    bg-onbackground
+    transition-all;
+  height: 2px; /* 1px? */
+  content: '';
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out;
+}
+.button_hover_animationD:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.button_hover_animation:hover {
+  @apply transition_all opacity-60
+}
+
+
+
+
+.text {
+  @apply inline;
+  font-family: "IBM Plex Mono", "Courier New";
+}
+.text::selection {
+  @apply bg-primary text-onprimary;
+}
+
+.header {
+  @apply
+    text;
+}
+
+.paragraph {
+  @apply text;
+}
+
+
+
+
+main {
+  @apply
+    flex flex-col justify-start;
+}
+
+
+h1 {
+  @apply
+    header
+    text-8xl;
+}
+
+h2 {
+  @apply
+    header
+    text-6xl;
+}
+
+h3 {
+  @apply
+    header
+    text-4xl uppercase;
+}
+
+h4 {
+  @apply
+  header
+    default_link_button
+    text-3xl;
+}
+
+p1 {
+  @apply
+    text
+    text-lg text-gray-500;
+}
+
+p3 {
+  @apply
+    paragraph
+    text-base;
+}
+
+
+
+
+.default_link_button {
+  @apply button_hover_animation;
+}
+
+
+.primary_button {
+  @apply
+    button_hover_animationD
+    p-2 pl-4 pr-4 border rounded-lg bg-background;
+}
+.primary_button:after {
+  @apply
+    absolute left-0 bottom-0
+    w-full h-full
+    rounded-lg
+    bg-primary
+    transition-all;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+
+.scroll_down_button {
+  @apply border-none;
+  transition: all 0.2s ease-in-out;
+}
+.scroll_down_button:hover {
+  @apply opacity-100 p-2 rounded-full;
+}
+
+
+.clickable_headline {
+  @apply button_hover_animation inner_size_screen justify-between;
+  display: flex;
+  min-height: 0;
+}

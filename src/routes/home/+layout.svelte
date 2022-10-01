@@ -68,7 +68,7 @@
     <header
       class="
         {headerClass} transition_all duration-1000 delay-1000
-        fixed z-10 w-screen h-24 pl-16 pr-0 py-8 bg-transparent text-oncontainer flex justify-between items-center"
+        fixed z-10 w-screen h-24 pl-4 md:pl-16 pr-0 py-8 bg-transparent text-oncontainer flex justify-between items-center"
       >
       {#if isVisibleMenu}
         <div class="flex items-center">

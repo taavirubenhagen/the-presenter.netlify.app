@@ -6,7 +6,7 @@
   import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"
 
 	import "../.././app.postcss";
-	import { debug, defaultFade, isVisibleMenuStore } from "../.././stores";
+	import { debug, defaultFade, scrollYStore, isVisibleMenuStore } from "../.././stores";
 	import SecondaryButton from "../.././components/buttons/secondary.svelte";
 	//import "../_assets/my_face_circle.png"
 
@@ -31,6 +31,12 @@
 	let scrollY = 0
 	$: isY0 = scrollY === 0
 	let previousScrollY = scrollY;
+
+  scrollYStore.update(_ => scrollY);
+  scrollYStore.subscribe(value => scrollY = value);
+
+
+  
 
 	type tHeaderClass = "-top-24" | "top-0"
 	function updateHeaderVisibility(y: number): tHeaderClass {

@@ -1,3 +1,8 @@
+<svelte:window bind:scrollY={scrollY}/>
+
+
+
+
 <script defer lang="ts">
 
   import { onMount } from 'svelte'
@@ -55,6 +60,58 @@
 
 
 
+  
+  type tBlurClass = "hidden" | "blur-0" | "blur-sm" | "blur" | "blur-md" | "blur-lg" | "blur-xl" | "blur-2xl" | "blur-3xl"
+  function updateImage1Blur(y: number, firstY = 0, secondY = window.innerHeight): tBlurClass {
+    const range = secondY - firstY
+    //return "blur-0"
+    if (y < range * 0.1) return "blur-3xl"
+    if (y < range * 0.3) return "blur-2xl"
+    if (y < range * 0.5) return "blur-xl"
+    if (y < range * 0.65) return "blur-lg"
+    if (y < range * 0.8) return "blur-md"
+    if (y < range * 0.9) return "blur"
+    if (y < range * 0.95) return "blur-sm"
+    if (y <= range) return "blur-0"
+    if (y > range) return "blur-0"
+    return "hidden"
+    if (y < range * 0.1) return "blur-0"
+    if (y < range * 0.3) return "blur-sm"
+    if (y < range * 0.5) return "blur"
+    if (y < range * 0.65) return "blur-md"
+    if (y < range * 0.8) return "blur-lg"
+    if (y < range * 0.9) return "blur-xl"
+    if (y < range * 0.95) return "blur-2xl"
+    if (y <= range) return "blur-3xl"
+    if (y > range) return "blur-3xl"
+    return "hidden"
+  }
+  /*function updateImage1Opacity(y: number, firstY = 0, secondY = window.innerHeight) {
+    const range = secondY - firstY
+    const dezArr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for (let n: number in dezArr) {
+      if (y < range * 2 * n / 10) return `opacity-${n - 1}0`
+    }
+    if (y < range * 0.1) return "blur-3xl"
+    if (y < range * 0.3) return "blur-2xl"
+    if (y < range * 0.5) return "blur-xl"
+    if (y < range * 0.65) return "blur-lg"
+    if (y < range * 0.8) return "blur-md"
+    if (y < range * 0.9) return "blur"
+    if (y < range * 0.95) return "blur-sm"
+    if (y <= range) return "blur-0"
+    if (y > range) return "blur-0"
+    return "hidden"
+  }*/
+  $: imageClass1 = `landing_image fixed ${updateImage1Blur(scrollY, 1 * window.innerHeight)}`
+  $: isImage1Visible = scrollY < 0.9 * window.innerHeight
+
+  let scrollY = 0
+  g.scrollYStore.update(_ => scrollY);
+  g.scrollYStore.subscribe(value => scrollY = value);
+
+
+
 
   onMount(() => {
     let currentDelay = 0
@@ -80,17 +137,21 @@
 
 
 
-<div class="size_screen absolute -z-20 -top-16 md:top-0 flex_col_center">
-  <div class="landing_image">
-    <img
-      src="pm-mockup-dark-home.png"
-      alt="The Presentation Master."
-      class="landing_image"
-    >
-  </div>
+<div class="size_screen absolute -z-20 -mt-16 md:mt-16 flex_col_center">
+  {#if isImage1Visible}
+    <div transition:fade={g.defaultFade} class={imageClass1}>
+      <img
+        src="pm-mockup-dark-home.png"
+        alt="The Presentation Master."
+        class="landing_image"
+      >
+    </div>
+  {/if}
 </div>
+
+
 <div class="max-h-screen flex flex-col items-center">
-  <div class="size_screen flex_col_center pb-32 md:pb-0">
+  <div class="size_screen flex_col_center pb-24 sm:pb-16 md:pb-0">
     {#if isVisibleHeader2}
       <h1 transition:fade={g.defaultFade}>Every presentation tool<br/>in one app.</h1>
     {:else}
@@ -118,11 +179,6 @@
 </div>
 
 
-<div class="size_screen -z-20 absolute top-full flex_col_center">
-  <div>
-    <img class="mr-16" style="height: 36rem;" src="pm-mockup-dark-home.png" alt="The Presentation Master.">
-  </div>
-</div>
 <div class="max-h-screen flex flex-col items-center">
   <div class="size_screen flex_col_center">
     <h1 transition:fade={g.defaultFade}>The Presenter.</h1>
@@ -140,7 +196,7 @@
 </div>
 
 
-<div class="size_screen -z-20 absolute" style="top: calc(2 * 100% - 4rem)">
+<div class="size_screen absolute -z-20 -mt-16 md:mt-16" style="top: calc(2 * 100% - 4rem)">
   <div>
     <!--<img class="mt-24 mr-16" style="height: 36rem;" src="" alt="The Presentation Master.">-->
   </div>
@@ -153,6 +209,7 @@
       <p1>
         is an holistic presentation assistant for any device that functions as
         remote control for your PowerPoint presentation, shows your speaker notes, vibrates when you reach your time limit and much more.
+        The main version is currently in development; scroll down to see what we already built.
       </p1>
     </div>
     <div class="px-48 flex justify-evenly items-center">
@@ -192,7 +249,7 @@
       <div class="h-8"></div>
       <p1>
         <br>
-        ...is the minimalist forerunner for The Presenter.<br>
+        ...is the current, minimalist version of The Presenter.<br>
         <br>
         Every presentation tool in one app.<br>
         Remote control, timer, speaker notes and much more, directly on your phone.

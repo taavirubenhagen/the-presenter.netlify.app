@@ -11,4 +11,7 @@ export const defaultCharDuration = 85;
 
 
 
+export const scrollYStore = writable(0)
+
+
 export const isVisibleMenuStore = writable(debug)

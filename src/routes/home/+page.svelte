@@ -65,7 +65,7 @@
   function updateImage1Blur(y: number, firstY = 0, secondY = window.innerHeight): tBlurClass {
     const range = secondY - firstY
     //return "blur-0"
-    if (y < range * 0.1) return "blur-3xl"
+    /*if (y < range * 0.1) return "blur-3xl"
     if (y < range * 0.3) return "blur-2xl"
     if (y < range * 0.5) return "blur-xl"
     if (y < range * 0.65) return "blur-lg"
@@ -83,8 +83,8 @@
     if (y < range * 0.9) return "blur-xl"
     if (y < range * 0.95) return "blur-2xl"
     if (y <= range) return "blur-3xl"
-    if (y > range) return "blur-3xl"
-    return "hidden"
+    if (y > range) return "blur-3xl"*/
+    return "blur-0"
   }
   /*function updateImage1Opacity(y: number, firstY = 0, secondY = window.innerHeight) {
     const range = secondY - firstY

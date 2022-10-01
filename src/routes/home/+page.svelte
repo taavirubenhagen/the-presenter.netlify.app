@@ -81,7 +81,7 @@
 
 
 <div class="size_screen -z-20 md:absolute flex_col_center">
-  <div class="landing_image">
+  <div class="landing_image opacity-0 md:opacity-100">
     <img
       src="pm-mockup-dark-home.png"
       alt="The Presentation Master."

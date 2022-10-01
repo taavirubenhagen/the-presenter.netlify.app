@@ -80,7 +80,7 @@
 
 
 
-<div class="inner_size_screen md:size_screen -z-20 absolute flex_col_center">
+<div class="md:size_screen absolute -z-20 pb-16 md:pb-0 flex_col_center">
   <div class="landing_image">
     <img
       src="pm-mockup-dark-home.png"
@@ -108,7 +108,7 @@
   {#if isVisibleRest}
     <button
       title="Scroll down"
-      class="scroll_down_button relative bottom-48 md:bottom-24 right-8 opacity-20"
+      class="scroll_down_button relative bottom-32 md:bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
       on:click={() => scroller.scrollTo({ offset: window.innerHeight, duration: 1000 })}
     >

@@ -17,7 +17,7 @@
 
   export let hasUnderline = false
   if (hasUnderline) {
-    className += " md:button_hover_animationD"
+    className += " button_hover_animationD"
     overrideClasses = true
   }
 

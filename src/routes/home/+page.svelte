@@ -80,7 +80,7 @@
 
 
 
-<div class="md:size_screen absolute -z-20 pb-16 md:pb-0 flex_col_center">
+<div class="size_screen absolute -z-20 pb-16 md:pb-0 flex_col_center">
   <div class="landing_image">
     <img
       src="pm-mockup-dark-home.png"

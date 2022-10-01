@@ -36,7 +36,7 @@
   scrollYStore.subscribe(value => scrollY = value);
 
 
-  
+
 
 	type tHeaderClass = "-top-24" | "top-0"
 	function updateHeaderVisibility(y: number): tHeaderClass {
@@ -107,7 +107,11 @@
         <div class="flex items-center">
           {#each [
           ] as data, i}
-            <SecondaryButton hasUnderline={true} title={data[0]} href={data[1]}/>
+            <SecondaryButton hasUnderline={true} title={data[0]}>
+              <a href={data[1]}>
+                <p3>{data[0]}</p3>
+              </a>
+            </SecondaryButton>
           {/each}
         </div>
       {/if}

@@ -46,11 +46,6 @@
 
 
 
-  let w1ndow = window;
-
-
-
-
   const subheaderText = "I build and distribute blazingly fast, bleeding-edge cross-platform apps."
   
   
@@ -67,7 +62,7 @@
 
   
   type tBlurClass = "hidden" | "blur-0" | "blur-sm" | "blur" | "blur-md" | "blur-lg" | "blur-xl" | "blur-2xl" | "blur-3xl"
-  function updateImage1Blur(y: number, firstY = 0, secondY = w1ndow.innerHeight): tBlurClass {
+  function updateImage1Blur(y: number, firstY = 0, secondY = window.innerHeight): tBlurClass {
     const range = secondY - firstY
     //return "blur-0"
     if (y < range * 0.1) return "blur-3xl"
@@ -91,7 +86,7 @@
     if (y > range) return "blur-3xl"
     return "blur-0"
   }
-  /*function updateImage1Opacity(y: number, firstY = 0, secondY = w1ndow.innerHeight) {
+  /*function updateImage1Opacity(y: number, firstY = 0, secondY = window.innerHeight) {
     const range = secondY - firstY
     const dezArr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     for (let n: number in dezArr) {
@@ -108,8 +103,8 @@
     if (y > range) return "blur-0"
     return "hidden"
   }*/
-  $: imageClass1 = `landing_image fixed ${updateImage1Blur(scrollY, 1 * w1ndow.innerHeight)}`
-  $: isImage1Visible = scrollY < 0.9 * w1ndow.innerHeight
+  $: imageClass1 = `landing_image fixed ${updateImage1Blur(scrollY, 1 * window.innerHeight)}`
+  $: isImage1Visible = scrollY < 0.9 * window.innerHeight
 
   let scrollY = 0
   g.scrollYStore.update(_ => scrollY);
@@ -119,7 +114,7 @@
 
 
   onMount(() => {
-    w1ndow = window
+    window = window
     let currentDelay = 0
     currentDelay += 500
     setTimeout(() => isVisibleHeader1 = true, currentDelay)
@@ -177,7 +172,7 @@
       title="Scroll down"
       class="scroll_down_button relative bottom-40 md:bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
-      on:click={() => scroller.scrollTo({ offset: w1ndow.innerHeight, duration: 1000 })}
+      on:click={() => scroller.scrollTo({ offset: window.innerHeight, duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>
     </button>
@@ -194,7 +189,7 @@
       title="Scroll down"
       class="scroll_down_button relative bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
-      on:click={() => scroller.scrollTo({ offset: 2 * w1ndow.innerHeight, duration: 1000 })}
+      on:click={() => scroller.scrollTo({ offset: 2 * window.innerHeight, duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>
     </button>
@@ -235,7 +230,7 @@
       title="Scroll down"
       class="scroll_down_button relative bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
-      on:click={() => scroller.scrollTo({ offset: 3 * w1ndow.innerHeight, duration: 1000 })}
+      on:click={() => scroller.scrollTo({ offset: 3 * window.innerHeight, duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>
     </button>
@@ -280,8 +275,8 @@
         </div>
         <div class="h-8"></div>
         <div class="flex items-center">
-          <PrimaryButton title="Download w1ndows server">
-            <p2 class="font-bold">w1ndows (Required for remote control)</p2>
+          <PrimaryButton title="Download Windows server">
+            <p2 class="font-bold">Windows (Required for remote control)</p2>
           </PrimaryButton>
         </div>
       </div>
@@ -292,7 +287,7 @@
       title="Scroll down"
       class="scroll_down_button relative bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
-      on:click={() => scroller.scrollTo({ offset: 3 * w1ndow.innerHeight, duration: 1000 })}
+      on:click={() => scroller.scrollTo({ offset: 3 * window.innerHeight, duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>
     </button>
@@ -346,7 +341,7 @@
       title="Scroll down"
       class="scroll_down_button relative bottom-24 opacity-20 w-full"
       transition:fade={g.defaultFade}
-      on:click={() => scroller.scrollTo({ offset: w1ndow.outerHeight, duration: 1000 })}
+      on:click={() => scroller.scrollTo({ offset: window.outerHeight, duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>
     </button>

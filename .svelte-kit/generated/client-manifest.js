@@ -8,11 +8,11 @@ export { matchers } from './client-matchers.js';
 	() => import('./nodes/5'),
 	() => import('./nodes/6')];
 
-			export const server_loads = [];
+			export const server_loads = [2];
 
 			export const dictionary = {
 	"": [~4],
-	"home": [5,[2]],
+	"home": [~5,[2]],
 	"me": [6,[3]]
 };
 

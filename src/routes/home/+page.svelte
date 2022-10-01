@@ -90,7 +90,7 @@
   </div>
 </div>
 <div class="max-h-screen flex flex-col items-center">
-  <div class="size_screen flex_col_center">
+  <div class="size_screen flex_col_center pb-16 md:pb-0">
     {#if isVisibleHeader2}
       <h1 transition:fade={g.defaultFade}>Every presentation tool<br/>in one app.</h1>
     {:else}

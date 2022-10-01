@@ -145,7 +145,7 @@
     <!--<img class="mt-24 mr-16" style="height: 36rem;" src="" alt="The Presentation Master.">-->
   </div>
 </div>
-<div class="max-h-screen flex flex-col items-center">
+<div class="md:max-h-screen flex flex-col items-center">
   <div class="size_screen flex flex-col justify-evenly">
     <div></div>
     <div class="px-48 text-justify">
@@ -180,7 +180,7 @@
 </div>
 
 
-<div class="size_screen -z-20 absolute" style="top: calc(3 * 100% - 4rem)">
+<div class="size_screen -z-20 md:absolute" style="top: calc(3 * 100% - 4rem)">
   <div class="h-full absolute right-0 flex_col_center">
     <img class="h-full mt-24" src="pm_mockup_video_landing.png" alt="The Presentation Master.">
   </div>

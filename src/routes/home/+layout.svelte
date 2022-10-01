@@ -75,17 +75,28 @@
           <div class="w-8 h-8 mr-4 rounded-2xl bg-primary" transition:fade={defaultFade}>
             <img src="logo.png" alt="img">
           </div>
-          <SecondaryButton
-            dropdown="all"
-            hasUnderline={true}
-            title="The Presenter"
-            items={[
-              ["Vision", ""],
-              ["Contact", ""],
-            ]}
-          >
-            <p3 class='font-bold text-transparent md:text-oncontainer'>Presenter<p3/>
-          </SecondaryButton>
+          {#if window.innerWidth > 640}
+            <SecondaryButton
+              dropdown="all"
+              hasUnderline={true}
+              title="The Presenter"
+              items={[
+                ["Vision", ""],
+                ["Contact", ""],
+              ]}
+            >
+              <p3 class='font-bold'>Presenter<p3/>
+            </SecondaryButton>
+          {:else}
+            <SecondaryButton
+              dropdown="all"
+              title="The Presenter"
+              items={[
+                ["Vision", ""],
+                ["Contact", ""],
+              ]}
+            />
+          {/if}
         </div>
         <div class="flex items-center">
           {#each [

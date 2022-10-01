@@ -108,7 +108,7 @@
   {#if isVisibleRest}
     <button
       title="Scroll down"
-      class="scroll_down_button relative bottom-24 right-8 opacity-20"
+      class="scroll_down_button relative bottom-48 md:bottom-24 right-8 opacity-20"
       transition:fade={g.defaultFade}
       on:click={() => scroller.scrollTo({ offset: window.innerHeight, duration: 1000 })}
     >

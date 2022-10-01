@@ -137,26 +137,26 @@ main {
 h1 {
   @apply
     header
-    text-center text-8xl;
+    text-center text-4xl md:text-8xl;
 }
 
 h2 {
   @apply
     header
-    text-6xl;
+    text-3xl md:text-6xl;
 }
 
 h3 {
   @apply
     header
-    text-4xl uppercase;
+    text-3xl md:text-4xl uppercase;
 }
 
 h4 {
   @apply
   header
     default_link_button
-    text-3xl;
+    text-2xl md:text-3xl;
 }
 
 p1 {
@@ -217,4 +217,21 @@ p3 {
   @apply button_hover_animation inner_size_screen justify-between;
   display: flex;
   min-height: 0;
+}
+
+
+
+
+
+
+
+
+.landing_image {
+  @apply h-64 mr-4;
+}
+@media (min-width: 768px) {
+  .landing_image {
+    @apply mr-16;
+    height: 36rem;
+  }
 }

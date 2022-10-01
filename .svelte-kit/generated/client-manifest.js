@@ -11,9 +11,9 @@ export { matchers } from './client-matchers.js';
 			export const server_loads = [];
 
 			export const dictionary = {
-	"": [4],
-	"me": [5,[2]],
-	"projects": [6,[3]]
+	"": [~4],
+	"home": [5,[2]],
+	"me": [6,[3]]
 };
 
 			export const hooks = {

@@ -81,8 +81,12 @@
 
 
 <div class="size_screen -z-20 absolute flex_col_center">
-  <div>
-    <img class="mr-16" style="height: 36rem;" src="pm-mockup-dark-home.png" alt="The Presentation Master.">
+  <div class="landing_image">
+    <img
+      src="pm-mockup-dark-home.png"
+      alt="The Presentation Master."
+      class="landing_image"
+    >
   </div>
 </div>
 <div class="max-h-screen flex flex-col items-center">

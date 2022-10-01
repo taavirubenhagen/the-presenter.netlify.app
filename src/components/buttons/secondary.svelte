@@ -1,11 +1,11 @@
 <script lang="ts">
   import { fade, fly } from "svelte/transition";
 
-  //import ChevronUp from "svelte-material-icons/ChevronUp.svelte"
-  //import ChevronDown from "svelte-material-icons/ChevronDown.svelte"
+  import ChevronUp from "svelte-material-icons/ChevronUp.svelte"
+  import ChevronDown from "svelte-material-icons/ChevronDown.svelte"
 
 	import "../../app.postcss";
-	//import { mainContentDefaultFade } from "../../stores";
+	import { defaultFade } from "../.././stores";
 
 	import SecondaryButton from "./secondary.svelte";
 
@@ -22,7 +22,6 @@
   }
 
   export let title = ""
-  export let href: string = ""
   export let onclick = () => {}
 
 
@@ -40,19 +39,16 @@
 
 
 
-<div class="relative mr-16 {className}"><!--transition:fade={mainContentDefaultFade}>-->
+<div class="relative {className}" transition:fade={defaultFade}>
   <div class="flex">
     <button
       title={title}
       on:click={dropdown == "all" ? () => expanded = !expanded : onclick}
+      class={overrideClasses ? "" : "default_link_button"}
     >
-      <a  href={dropdown == "all" ? null : href}>
-        <p3 class={overrideClasses ? "" : "default_link_button"}>
-          {title}
-        </p3>
-      </a>
+      <slot/>
     </button>
-    <!--{#if dropdown !== "none"}
+    {#if dropdown !== "none"}
       <button title={title} on:click={() => expanded = !expanded}>
         {#if expanded}
           <ChevronUp size=24/>
@@ -60,14 +56,18 @@
           <ChevronDown size=24/>
         {/if}
       </button>
-    {/if}-->
+    {/if}
   </div>
   {#if expanded}
     <div class="absolute top-8 -left-2 border-secondary-500 p-2">
       {#each items as item, i}
         <div transition:fly="{{ y: -( i * 8 + 32 + 8 ), duration: 500 }}">
           <div class="h-2"></div>
-          <SecondaryButton title={item[0]} href={item[1]}/>
+          <SecondaryButton title={item[0]}>
+            <a href={item[1]}>
+              <p3>{item[0]}</p3>
+            </a>
+          </SecondaryButton>
         </div>
       {/each}
     </div>

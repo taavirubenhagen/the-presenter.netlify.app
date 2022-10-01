@@ -4,16 +4,8 @@
 
 
 :root {
-  @apply bg-background text-onbackground;
-  font-family: "IBM Plex Sans", "Courier New", "Open Sans";
-}
-
-
-
-
-body {
   @apply m-0 p-0 bg-background text-onbackground;
-  font-family: "IBM Plex Mono";
+  font-family: "Raleway", "Open Sans", "IBM Plex Mono";
 }
 
 
@@ -82,7 +74,7 @@ body::-webkit-scrollbar {
 
 
 .transition_all {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 
@@ -118,15 +110,15 @@ body::-webkit-scrollbar {
 
 .text {
   @apply inline;
-  font-family: "IBM Plex Mono", "Courier New";
 }
 .text::selection {
-  @apply bg-primary text-onprimary;
+  background-color: theme('colors.onbackground');
+  color: theme('colors.background');
 }
 
 .header {
   @apply
-    text;
+    text font-bold;
 }
 
 .paragraph {
@@ -145,7 +137,7 @@ main {
 h1 {
   @apply
     header
-    text-8xl;
+    text-center text-8xl;
 }
 
 h2 {
@@ -170,7 +162,13 @@ h4 {
 p1 {
   @apply
     text
-    text-lg text-gray-500;
+    text-2xl text-gray-400;
+}
+
+p2 {
+  @apply
+    text
+    text-xl;
 }
 
 p3 {
@@ -190,13 +188,13 @@ p3 {
 .primary_button {
   @apply
     button_hover_animationD
-    p-2 pl-4 pr-4 border rounded-lg bg-background;
+    px-6 py-4 border rounded-xl bg-background;
 }
 .primary_button:after {
   @apply
     absolute left-0 bottom-0
     w-full h-full
-    rounded-lg
+    rounded-xl
     bg-primary
     transition-all;
   content: '';

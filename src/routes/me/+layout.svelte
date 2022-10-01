@@ -6,7 +6,7 @@
   import DotsHorizontal from "svelte-material-icons/DotsHorizontal.svelte"
 
 	import "../.././app.postcss";
-	import { debug, mainContentDefaultFade, isVisibleMenuStore } from "../.././stores";
+	import { debug, defaultFade, isVisibleMenuStore } from "../.././stores";
 	import SecondaryButton from "../.././components/buttons/secondary.svelte";
 	//import "../_assets/my_face_circle.png"
 
@@ -72,13 +72,17 @@
       >
       {#if isVisibleMenu}
         <div class="flex items-center">
-          <div class="w-8 h-8 mr-4 rounded-2xl bg-primary" transition:fade={mainContentDefaultFade}>
+          <div class="w-8 h-8 mr-4 rounded-2xl bg-primary" transition:fade={defaultFade}>
             <img src={/*myFace*/""} alt="img">
           </div>
           {#each [
             ["Taavi Rübenhagen", ""],
           ] as data, i}
-            <SecondaryButton hasUnderline={true} title={data[0]} href={data[1]}/>
+              <SecondaryButton hasUnderline={true} title={data[0]}>
+                <a href={data[1]}>
+                  <p3>{data[0]}</p3>
+                </a>
+              </SecondaryButton>
           {/each}
         </div>
         <div class="flex items-center">
@@ -87,7 +91,11 @@
             ["Projects", ""],	// TODO: Link to section
             ["Timeline", ""],
           ] as data, i}
-            <SecondaryButton title={data[0]} href={data[1]}/>
+            <SecondaryButton title={data[0]}>
+              <a href={data[1]}>
+                <p3>{data[0]}</p3>
+              </a>
+            </SecondaryButton>
           {/each}
           <SecondaryButton
             dropdown="all"
@@ -98,7 +106,7 @@
               ["Rules", ""],
             ]}
           />
-          <div class="grid justify-items-center items-center" transition:fade={ mainContentDefaultFade }>
+          <div class="grid justify-items-center items-center" transition:fade={ defaultFade }>
             <button
               title="Contact"
               class="primary_button"
@@ -121,7 +129,7 @@
         </div>
       {/if}
       {#if isVisibleMenu}
-        <div class="absolute right-4 opacity-10" transition:fade={mainContentDefaultFade}>
+        <div class="absolute right-4 opacity-10" transition:fade={defaultFade}>
           <button
             on:click={() => {
               isVisibleMenuStore.update(_ => false);
@@ -132,7 +140,7 @@
           </button>
         </div>
       {:else}
-        <div class="absolute right-4 opacity-25" transition:fade={mainContentDefaultFade}>
+        <div class="absolute right-4 opacity-25" transition:fade={defaultFade}>
           <button
             on:click={() => {
               isVisibleMenuStore.update(_ => true);

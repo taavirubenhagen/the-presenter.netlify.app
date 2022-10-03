@@ -130,7 +130,7 @@
       <div></div>
       <div></div>
       <div class="opacity-25 border-b border-primary col-start-1 col-end-4"></div>
-      <div class="col-start-1 col-end-4 flex flex-col sm:flex-row justify-between items-center sm:items-start">
+      <div class="col-start-1 col-end-4 w-full flex flex-col sm:flex-row justify-between items-center sm:items-start">
         <div>
           <p4>©2022 Taavi Rübenhagen (Developer)</p4>
           <div class="h-4 sm:h-0"></div>

@@ -32,10 +32,10 @@
       </div>
     </Saos>
   </div>
-  <div class="absolute bottom-0 w-full flex_row_center">
+  <div class="absolute bottom-24 w-full flex_row_center">
     <button
       title="Scroll down"
-      class="scroll_down_button relative bottom-24 right-8 opacity-20"
+      class="scroll_down_button relative right-8 opacity-20"
       on:click={() => scroller.scrollTo({ offset: index * get(g.wih), duration: 1000 })}
     >
       <ChevronDown size=64 color="white"/>

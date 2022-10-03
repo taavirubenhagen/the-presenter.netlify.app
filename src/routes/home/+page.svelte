@@ -4,7 +4,7 @@
 
 
 <script defer lang="ts">
-
+  import { get } from "svelte/store"
   import { onMount } from 'svelte'
   import { fade, fly } from "svelte/transition"
 
@@ -116,7 +116,7 @@
       <!--<img class="mt-24 mr-16" style="height: 36rem;" src="" alt="The Presentation Master.">-->
     </div>
   </div>
-  <div class="md:max-h-screen flex flex-col items-center">
+  <div class="max-h-screen flex flex-col items-center relative">
     <Saos once={true} animation={g.genDefaultScrollBottom(1000)}>
       <div class="size_screen flex flex-col sm:justify-evenly">
         <div></div>
@@ -148,13 +148,15 @@
         <div></div>
       </div>
     </Saos>
-    <button
-      title="Scroll down"
-      class="scroll_down_button relative bottom-24 right-8 opacity-20"
-      on:click={() => scroller.scrollTo({ offset: 3 * window.innerHeight, duration: 1000 })}
-    >
-      <ChevronDown size=64 color="white"/>
-    </button>
+    <div class="absolute bottom-24 w-full flex_row_center">
+      <button
+        title="Scroll down"
+        class="scroll_down_button relative right-8 opacity-20"
+        on:click={() => scroller.scrollTo({ offset: 3 * get(g.wih), duration: 1000 })}
+      >
+        <ChevronDown size=64 color="white"/>
+      </button>
+    </div>
   </div>
   
   

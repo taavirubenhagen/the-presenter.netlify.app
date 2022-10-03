@@ -20,8 +20,8 @@
 
 
 
-<div class="min-h-screen relative">
-  <div class="size_screen max-h-full flex_col_center">
+<div class="h-screen relative">
+  <div class="size_screen flex_col_center">
     <Saos once={true} animation={hasAnimation ? g.defaultScrollBottom : ""}>
       <div class="flex_col_center">
         <h1>{@html title}</h1>
@@ -32,7 +32,7 @@
       </div>
     </Saos>
   </div>
-  <div class="absolute bottom-24 w-full flex_row_center">
+  <div class="absolute bottom-24 sm:bottom-8 w-full flex_row_center">
     <button
       title="Scroll down"
       class="scroll_down_button relative right-8 opacity-20"

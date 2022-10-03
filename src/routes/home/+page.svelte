@@ -116,7 +116,7 @@
       <!--<img class="mt-24 mr-16" style="height: 36rem;" src="" alt="The Presentation Master.">-->
     </div>
   </div>
-  <div class="max-h-screen flex flex-col items-center relative">
+  <div class="h-screen relative">
     <Saos once={true} animation={g.genDefaultScrollBottom(1000)}>
       <div class="size_screen flex flex-col sm:justify-evenly">
         <div></div>
@@ -148,7 +148,7 @@
         <div></div>
       </div>
     </Saos>
-    <div class="absolute bottom-24 w-full flex_row_center">
+    <div class="absolute bottom-24 sm:bottom-8 w-full flex_row_center">
       <button
         title="Scroll down"
         class="scroll_down_button relative right-8 opacity-20"

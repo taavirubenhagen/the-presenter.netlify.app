@@ -129,9 +129,7 @@
               The main version is currently in development; scroll down to see what we already built.
             </p1>
         </div>
-        {#if wih < 640}
-          <div class="h-8"></div>
-        {/if}
+        <div class="h-16 sm:h-0"></div>
         <div class="sm:mx-48 flex flex-col sm:flex-row justify-evenly items-center">
           <PrimaryButton href="me" title="Become Tester">
             <p2 class="font-bold">Become Tester</p2>
@@ -147,6 +145,7 @@
             <p2>Read FAQ</p2>
           </SecondaryButton>
         </div>
+        <div></div>
       </div>
     </Saos>
     <button

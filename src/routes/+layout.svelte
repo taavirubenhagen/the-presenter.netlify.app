@@ -55,7 +55,7 @@
 
 
   onMount(() => {
-    g.wih.update(_ => window.outerHeight)
+    g.wih.update(_ => window.innerHeight)
   })
 </script>
 

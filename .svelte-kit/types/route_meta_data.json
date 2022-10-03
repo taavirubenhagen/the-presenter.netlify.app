@@ -4,12 +4,10 @@
 	],
 	"me": [],
 	"projects": [],
-	"home": [
-		"src/routes/home/+page.server.js",
-		"src/routes/home/+layout.server.js",
-		"src/routes/home/+layout.server.js"
-	],
+	"home": [],
 	"+layout.server.js": [
 		"src/routes/+layout.server.js/+layout.server.js"
-	]
+	],
+	"migrate": [],
+	"roadmap": []
 }

@@ -39,16 +39,16 @@
 
 
 
-<div class="relative {className}" transition:fade={defaultFade}>
-  <div class="flex">
-    <button
-      title={title}
-      on:click={dropdown == "all" ? () => expanded = !expanded : onclick}
-      class={overrideClasses ? "" : "default_link_button"}
-    >
-      <slot/>
-    </button>
-    {#if dropdown !== "none"}
+<div
+  class="{className} relative z-50"
+>
+  <button
+    title={title}
+    class="{overrideClasses ? "" : "default_link_button"} flex"
+    on:click={dropdown == "all" ? () => expanded = !expanded : onclick}
+  >
+    <slot><p3 class="font-bold">{title}</p3></slot>
+    {#if dropdown === "icon"}
       <button title={title} on:click={() => expanded = !expanded}>
         {#if expanded}
           <ChevronUp size=24/>
@@ -57,7 +57,7 @@
         {/if}
       </button>
     {/if}
-  </div>
+  </button>
   {#if expanded}
     <div class="absolute top-8 -left-2 border-secondary-500 p-2">
       {#each items as item, i}

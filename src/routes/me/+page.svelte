@@ -183,7 +183,7 @@
       <div class="flex justify-center">
         <button title={texts[0].toString()}>
           <a href={texts[1].toString()}>
-            <h4 class="text-center">{texts[0]}</h4>
+            <h4 class="default_link_button text-center">{texts[0]}</h4>
           </a>
         </button>
       </div>

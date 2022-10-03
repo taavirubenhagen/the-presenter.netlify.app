@@ -20,7 +20,7 @@
 
 
 
-<div class="relative">
+<div class="h-screen relative">
   <div class="size_screen flex_col_center">
     <Saos once={true} animation={hasAnimation ? g.defaultScrollBottom : ""}>
       <div class="flex_col_center">

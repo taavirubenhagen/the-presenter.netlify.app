@@ -131,7 +131,7 @@
         </div>
         <div class="h-16 sm:h-0"></div>
         <div class="sm:mx-48 flex flex-col sm:flex-row justify-evenly items-center">
-          <PrimaryButton href="me" title="Become Tester">
+          <PrimaryButton href="/beta" title="Become Tester">
             <p2 class="font-bold">Become Tester</p2>
           </PrimaryButton>
           <div class="h-8 sm:h-0"></div>
@@ -165,7 +165,7 @@
       <img class="h-full mt-24" src="pm_mockup_video_landing.png" alt="The Presentation Master.">
     </div>
   </div>
-  <Saos once={true} animation={g.defaultScrollBottom}>
+  <Saos once={true} animation={g.genDefaultScrollBottom(1000)}>
   <div class="max-h-screen flex flex-col items-center">
      <div class="size_screen flex flex-col">
       <div>

@@ -1,6 +1,6 @@
 <div>
   <h2>Privacy Policy</h2>
-  <div className="legal_page_content">
+  <div>
     <h5>This privacy policy applies to the following apps and websites:</h5><br/>
     - "The Presentation Master." in the Play Store<br/>
     - "Presentation Master - Remote" in the App Store, which will also be renamed to "The Presentation Master." soon<br/>

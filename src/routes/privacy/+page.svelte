@@ -1,4 +1,11 @@
-<div>
+<script lang="ts">
+  import "../.././app.postcss"
+</script>
+  
+  
+  
+
+<div class="size_screen">
   <h2>Privacy Policy</h2>
   <div>
     <h5>This privacy policy applies to the following apps and websites:</h5><br/>
